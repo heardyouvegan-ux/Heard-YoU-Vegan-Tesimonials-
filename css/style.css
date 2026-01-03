@@ -1,0 +1,530 @@
+/* Heard You Vegan - Review Page Styles */
+
+/* CSS Variables for Brand Colors */
+:root {
+    --primary-blue: #65b6cf;
+    --primary-green: #7bad9d;
+    --neutral-light: #e4e2dd;
+    --text-dark: #2c3e50;
+    --white: #ffffff;
+    --success-green: #7bad9d;
+    --error-red: #e74c3c;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Palatino', 'Palatino Linotype', 'Book Antiqua', serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: var(--neutral-light);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 1px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-green) 100%);
+    color: var(--white);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.95;
+}
+
+/* Review Form Section */
+.review-form-section {
+    padding: 60px 20px;
+}
+
+.form-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px var(--shadow);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+    font-size: 1rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid var(--neutral-light);
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Palatino', serif;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(101, 182, 207, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Star Rating */
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 8px;
+    font-size: 2rem;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    cursor: pointer;
+    color: #ddd;
+    transition: color 0.2s ease;
+}
+
+.star-rating input:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: #ffc107;
+}
+
+/* Checkbox Group */
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-top: 4px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+/* Submit Button */
+.btn-submit {
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-green) 100%);
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px var(--shadow);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+.btn-submit i {
+    margin-right: 10px;
+}
+
+/* Success Message */
+.success-message {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, rgba(123, 173, 157, 0.1) 0%, rgba(101, 182, 207, 0.1) 100%);
+    border-radius: 15px;
+    margin-top: 30px;
+}
+
+.success-message i {
+    font-size: 3rem;
+    color: var(--success-green);
+    margin-bottom: 15px;
+}
+
+.success-message h3 {
+    font-size: 2rem;
+    color: var(--primary-green);
+    margin-bottom: 10px;
+}
+
+.success-message p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 80px 20px;
+    background: var(--white);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.testimonial-card {
+    background: var(--neutral-light);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px var(--shadow);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--shadow);
+}
+
+.testimonial-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.testimonial-info h4 {
+    font-size: 1.3rem;
+    color: var(--primary-blue);
+    margin-bottom: 5px;
+}
+
+.testimonial-product {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+}
+
+.testimonial-rating {
+    color: #ffc107;
+    font-size: 1.2rem;
+}
+
+.testimonial-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.testimonial-text {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.testimonial-date {
+    font-size: 0.85rem;
+    color: #999;
+    text-align: right;
+}
+
+.loading-message {
+    text-align: center;
+    padding: 60px 20px;
+    color: #666;
+    font-size: 1.2rem;
+}
+
+.loading-message i {
+    font-size: 2rem;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+}
+
+/* Admin Section */
+.admin-section {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.btn-admin {
+    padding: 12px 30px;
+    background: var(--text-dark);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-admin:hover {
+    background: var(--primary-blue);
+}
+
+.admin-panel {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 40px;
+    margin-top: 30px;
+    box-shadow: 0 5px 15px var(--shadow);
+}
+
+.admin-panel h3 {
+    font-size: 2rem;
+    color: var(--primary-blue);
+    margin-bottom: 30px;
+}
+
+.admin-reviews-list {
+    text-align: left;
+}
+
+.admin-review-item {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--primary-blue);
+}
+
+.admin-review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.admin-review-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-edit,
+.btn-delete,
+.btn-approve {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-edit {
+    background: var(--primary-blue);
+    color: var(--white);
+}
+
+.btn-delete {
+    background: var(--error-red);
+    color: var(--white);
+}
+
+.btn-approve {
+    background: var(--success-green);
+    color: var(--white);
+}
+
+.btn-edit:hover,
+.btn-delete:hover,
+.btn-approve:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
+.review-status {
+    font-size: 0.85rem;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.review-status.approved {
+    background: #d4edda;
+    color: #155724;
+}
+
+.review-status.pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-blue) 100%);
+    color: var(--white);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.cta-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.cta-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 35px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-cta {
+    display: inline-block;
+    padding: 18px 45px;
+    background: var(--white);
+    color: var(--primary-blue);
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.btn-cta i {
+    margin-right: 10px;
+}
+
+/* Footer */
+.footer {
+    background: var(--text-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 30px 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .form-card {
+        padding: 30px 20px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-title {
+        font-size: 2rem;
+    }
+
+    .admin-panel {
+        padding: 25px 15px;
+    }
+
+    .admin-review-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .btn-submit,
+    .btn-cta {
+        font-size: 1rem;
+        padding: 15px 25px;
+    }
+}
