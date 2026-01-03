@@ -1,4 +1,213 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews | Heard You Vegan - Vegan Wellness Lifestyle Brand</title>
+    <meta name="description" content="Read real customer reviews and testimonials about Heard You Vegan's digital products and services. Join our vegan wellness community and share your glow-up story!">
+    <meta name="keywords" content="vegan reviews, wellness testimonials, Heard You Vegan, vegan lifestyle, healthy living, plant-based products">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://heardyouvegan.com/reviews">
+    <meta property="og:title" content="Customer Reviews | Heard You Vegan">
+    <meta property="og:description" content="Real stories from real people living their best vegan wellness life. See what our community is saying about our digital products and services!">
+    <meta property="og:image" content="https://heardyouvegan.com/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://heardyouvegan.com/reviews">
+    <meta property="twitter:title" content="Customer Reviews | Heard You Vegan">
+    <meta property="twitter:description" content="Real stories from real people living their best vegan wellness life. See what our community is saying!">
+    <meta property="twitter:image" content="https://heardyouvegan.com/images/og-image.jpg">
+    
+    <!-- Structured Data / Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Heard You Vegan",
+      "description": "Vegan wellness lifestyle brand offering digital products and services",
+      "url": "https://heardyouvegan.com",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "3",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1 class="hero-title">Share Your Glow-Up Story</h1>
+            <p class="hero-subtitle">Your voice matters, bestie! Let us know how Heard You Vegan has helped you on your wellness journey. 🌱✨</p>
+        </div>
+    </header>
+
+    <!-- Review Statistics Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div id="reviewStats">
+                <!-- Stats will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Review Form Section -->
+    <section class="review-form-section">
+        <div class="container">
+            <div class="form-card">
+                <h2 class="section-title">Leave Your Review</h2>
+                <p class="section-subtitle">We love hearing from you! Share your experience with our digital products and services.</p>
+                
+                <form id="reviewForm">
+                    <div class="form-group">
+                        <label for="customerName">Your Name *</label>
+                        <input type="text" id="customerName" name="customerName" required placeholder="Enter your name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="product">Which Product/Service Did You Purchase? *</label>
+                        <select id="product" name="product" required>
+                            <option value="">Select a product...</option>
+                            <option value="meal-plan">Meal Plan</option>
+                            <option value="recipe-ebook">Recipe eBook</option>
+                            <option value="wellness-guide">Wellness Guide</option>
+                            <option value="coaching-session">Coaching Session</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Rating *</label>
+                        <div class="star-rating">
+                            <input type="radio" id="star5" name="rating" value="5" required>
+                            <label for="star5" title="5 stars"><i class="fas fa-star"></i></label>
+                            
+                            <input type="radio" id="star4" name="rating" value="4">
+                            <label for="star4" title="4 stars"><i class="fas fa-star"></i></label>
+                            
+                            <input type="radio" id="star3" name="rating" value="3">
+                            <label for="star3" title="3 stars"><i class="fas fa-star"></i></label>
+                            
+                            <input type="radio" id="star2" name="rating" value="2">
+                            <label for="star2" title="2 stars"><i class="fas fa-star"></i></label>
+                            
+                            <input type="radio" id="star1" name="rating" value="1">
+                            <label for="star1" title="1 star"><i class="fas fa-star"></i></label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reviewTitle">Review Title *</label>
+                        <input type="text" id="reviewTitle" name="reviewTitle" required placeholder="Sum it up in a few words">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reviewText">Your Review *</label>
+                        <textarea id="reviewText" name="reviewText" rows="6" required placeholder="Tell us about your experience... What did you love? How has it helped your wellness journey?"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="photoUrl">Photo URL (Optional)</label>
+                        <input type="url" id="photoUrl" name="photoUrl" placeholder="https://example.com/your-photo.jpg">
+                        <small class="form-help">Add a link to your photo (from Instagram, Imgur, etc.). Leave blank if you don't have one.</small>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <label for="consent">I consent to having my review displayed on the Heard You Vegan website and marketing materials. *</label>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-paper-plane"></i> Submit Review
+                    </button>
+                </form>
+
+                <div id="successMessage" class="success-message hidden">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Thank You, Bestie! 💚</h3>
+                    <p>Your review has been submitted successfully. We appreciate you taking the time to share your experience!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Display Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">What Our Community Is Saying</h2>
+            <p class="section-subtitle">Real stories from real people living their best vegan wellness life 🌟</p>
+            
+            <div id="testimonialsList" class="testimonials-grid">
+                <!-- Testimonials will be loaded here -->
+                <div class="loading-message">
+                    <i class="fas fa-spinner fa-spin"></i> Loading testimonials...
+                </div>
+            </div>
+
+            <!-- Admin Controls (for editing/managing reviews) -->
+            <div class="admin-section" id="adminSection">
+                <button class="btn-admin" id="toggleAdmin">
+                    <i class="fas fa-cog"></i> Manage Reviews
+                </button>
+                
+                <div id="adminPanel" class="admin-panel hidden">
+                    <h3>Review Management</h3>
+                    
+                    <!-- Admin Dashboard Stats -->
+                    <div id="adminDashboard" class="admin-dashboard">
+                        <!-- Dashboard stats will be loaded here -->
+                    </div>
+                    
+                    <div id="adminReviewsList" class="admin-reviews-list">
+                        <!-- Admin reviews will be loaded here -->
+                    </div>
+                    
+                    <button class="btn-logout" onclick="localStorage.removeItem('adminAuth'); location.reload();">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Ready to Start Your Own Glow-Up Journey?</h2>
+            <p class="cta-subtitle">Join our community and discover delicious, healthy vegan living with that touch of Southern luxury.</p>
+            <a href="https://beacons.ai/heardyouvegan" target="_blank" class="btn-cta">
+                <i class="fas fa-shopping-bag"></i> Shop Now on Beacons
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Heard You Vegan. All rights reserved. 🌱</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
